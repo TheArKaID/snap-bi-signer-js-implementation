@@ -1,0 +1,14 @@
+{
+  "name": "snap-bi-signer-implementation",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "snap-bi-signer": "git@github.com:TheArKaID/snap-bi-signer-js.git"
+  }
+}
