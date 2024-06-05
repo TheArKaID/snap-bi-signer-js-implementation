@@ -9,6 +9,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "snap-bi-signer": "git@github.com:TheArKaID/snap-bi-signer-js.git"
+    "snap-bi-signer": "^0.1.0"
   }
 }
