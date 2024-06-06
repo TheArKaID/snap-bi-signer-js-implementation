@@ -9,6 +9,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "snap-bi-signer": "^0.1.0"
+    "snap-bi-signer": "^0.3.0"
   }
 }

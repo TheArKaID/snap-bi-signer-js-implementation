@@ -42,7 +42,8 @@ async function userInteraction() {
         case '1':
             console.log('Asymmetric Signature: \n');
             console.log(asymmetricSignature({
-                clientID: envVariables.CLIENT_ID, privateKey: envVariables.PRIVATE_KEY
+                clientID: envVariables.CLIENT_ID,
+                privateKey: envVariables.PRIVATE_KEY
             }));
             console.log('\n');
             rl.question('Press any key to continue', () => {
@@ -56,7 +57,9 @@ async function userInteraction() {
             console.log('Result: ');
             result = verifyAsymmetricSignature({
                 clientID: envVariables.CLIENT_ID,
-                publicKey: envVariables.PJP_PUBLIC_KEY, signature, timestamp
+                publicKey: envVariables.PJP_PUBLIC_KEY,
+                signature,
+                timestamp
             });
 
             if (result) {
@@ -81,17 +84,16 @@ async function userInteraction() {
             timestamp = await rla('Enter the timestamp: ');
             body = await rla('Enter the body: ');
             accessToken = await rla('Enter the AccessToken: ');
-            signature = symmetricSignature({
+            console.log('Signature: \n');
+            console.log(symmetricSignature({
                 clientSecret: envVariables.CLIENT_SECRET,
                 httpMethod,
                 relativeUrl: url,
                 timestamp,
                 requestBody: JSON.parse(body),
                 accessToken
-            });
+            }));
 
-            console.log('Signature: \n');
-            console.log(signature);
             console.log('\n');
             rl.question('Press any key to continue', () => {
                 return userInteraction();
